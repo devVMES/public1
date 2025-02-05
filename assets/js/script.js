@@ -44,3 +44,32 @@ window.addEventListener("scroll", function () {
   }
 
 });
+
+// JavaScript to handle form submission and show success message
+document.getElementById('newsletterForm').addEventListener('submit', function (event) {
+  event.preventDefault(); 
+
+
+  setTimeout(() => {
+   
+    document.querySelector('.input-field').style.display = 'none';
+    document.querySelector('.btn-secondary').style.display = 'none';
+
+
+    const successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block';
+
+   
+    setTimeout(() => {
+
+      document.getElementById('newsletterForm').reset();
+
+     
+      document.querySelector('.input-field').style.display = 'block';
+      document.querySelector('.btn-secondary').style.display = 'block';
+
+
+      successMessage.style.display = 'none';
+    }, 5000);
+  }, 1000); 
+});
