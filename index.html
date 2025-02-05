@@ -763,10 +763,19 @@
             Subscribe our newsletter for more update & news !!
           </p>
 
-          <form action="" class="form-wrapper">
-            <input type="email" name="email" class="input-field" placeholder="Enter Your Email" required>
-
+          <form action="" class="form-wrapper" id="newsletterForm">
+            <input 
+              type="email" 
+              name="email" 
+              class="input-field" 
+              placeholder="Enter Your Email" 
+              required
+            >
             <button type="submit" class="btn btn-secondary">Subscribe</button>
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message" style="display: none;">
+              <button class="btn btn-success" disabled>Subscribed Successfully!</button>
+            </div>
           </form>
 
         </div>
